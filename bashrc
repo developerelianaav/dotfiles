@@ -1,7 +1,14 @@
+#!/usr/bin/env bash
+
 # Files
 aliases="${HOME}/.config/shell/aliases"
 etccomp="/etc/bash_completion"
 usrcomp="/usr/share/bash-completion/bash_completion"
+
+# Sourcing 
+[ -f "${aliases}" ] && source "${aliases}"
+[ -f "${etccomp}" ] && source "${etccomp}"
+[ -f "${usrcomp}" ] && source "${usrcomp}"
 
 # Colors
 red="\[\033[0;31m\]"
@@ -14,9 +21,4 @@ gray="\[\033[0;37m\]"
 reset="\[\033[0m\]"
 
 # Prompt
-PS1="${cyan}[\w] ${green}[\T] ${reset}>> "
-
-# Sourcing 
-[ -f "${aliases}" ] && . "${aliases}"
-[ -f "${etccomp}" ] && . "${etccomp}"
-[ -f "${usrcomp}" ] && . "${usrcomp}"
+PS1="${cyan}[\w] ${green}[\T] ${yellow}>> ${reset}"
