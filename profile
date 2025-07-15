@@ -1,4 +1,5 @@
-BROWSER=firefox-esr
-EDITOR=nvim
-PATH="${HOME}/.local/bin:${PATH}"
-source ${HOME}/.bashrc
+export PATH="${PATH}:${HOME}/.local/bin"
+[ -f ${HOME}/.bashrc ] && . ${HOME}/.bashrc
+
+export BROWSER=firefox-esr
+export EDITOR=nvim
