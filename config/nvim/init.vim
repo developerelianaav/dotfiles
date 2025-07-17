@@ -11,3 +11,6 @@ inoremap <c-l> <Right>
 
 inoremap <c-s> <Esc>:%s//g<Left><Left>
 inoremap <c-w> <Esc>:w<Enter>
+
+nnoremap WW <Esc>:w<Enter>
+nnoremap WQ <Esc>:wq!<Enter>
